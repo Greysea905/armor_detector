@@ -1,0 +1,22 @@
+model: weights/best.pt      # 加训起点
+
+data: config/data.yaml
+
+# 基本项
+imgsz: 288           # 416不够快
+epochs: 60           # 加训 60 轮（早停 patience 15 可提前收）
+batch: 16            # RTX 4090D 24GB
+device: 0            # AutoDL GPU
+workers: 8
+name: armor          # 输出到 runs/armor/
+
+# 学习率 / 优化器
+optimizer: auto      # 自动选(实际 AdamW)
+lrf: 0.01            # 余弦退火终点
+cos_lr: true
+warmup_epochs: 3
+
+# 训练策略
+patience: 15         # 早停
+save_period: 5
+close_mosaic: 10     # 最后 10 轮关 mosaic

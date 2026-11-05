@@ -1,0 +1,15 @@
+# 装甲板检测数据配置(ultralytics data.yaml)
+# 数据来源:ENTERPRIZE 战队 2025 开源数据集(装甲板识别,3504 张)
+#   0 = dead  死亡状态装甲板(不自瞄,教模型识别并忽略)
+#   1 = red   红色灯条装甲板
+#   2 = blue  蓝色灯条装甲板
+# path 会被 train.py 用 datasets/ 绝对路径覆盖,这里仅作占位
+
+path: ../datasets
+train: images/train
+val: images/val
+
+names:
+  0: dead
+  1: red
+  2: blue

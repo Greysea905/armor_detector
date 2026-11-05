@@ -1,0 +1,13 @@
+runs/
+weights/
+datasets/
+
+# 数据集与标注
+data/
+prelabel_blue/
+prelabel_blue2/
+prelabel_red/
+
+__pycache__/
+*.pyc
+.DS_Store
